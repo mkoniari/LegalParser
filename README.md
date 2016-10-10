@@ -99,9 +99,3 @@
 > ΠΔ 
 > ΠΟΛ
 
-
-   
-   
-   
-This page is a companion for the SIAM Review paper on power-law distributions in empirical data, written by Koniaris Mariow (me), Cosma R. Shalizi and M.E.J. Newman. This page hosts implementations of the methods we describe in the article, including several by authors other than us. Our goal is for the methods to be widely accessible to the community. Python users may want to consider the powerlaw package by Alstott et al.
-NOTE: we cannot provide technical support for code not written by us, and we are busy with other projects now and so may not provide support for our own code.
