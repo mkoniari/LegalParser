@@ -33,70 +33,63 @@ We obtain images directly from the pdf.
 Our parser imlementation can handle the following types of documents
 
 | TYPE  | URI | STRUCTURAL ANALYSIS|
-| ------------- | ------------- |
-| LAW| act | YES |
-| PRESIDENTIAL DECREE| pd |YES |
-| regulatory act   |ap | YES/NO |
-| ΕΓΚΥΚΛΙΟΣ| egk| NO |
-| OTHER LEGAL DOCS| other | NO |
+| ------------- | ------------- | ------------- |
+| Law| act | YES |
+| Presidential  Decree| pd |YES |
+| Regulatory Act  |ap | YES/NO |
+| Ιnformation circulars| egk| NO |
+| Other Legal Docs| other | NO |
 
 
 
-The Structural Analysis refers to whether the hierarchical structure of a document is considered by the parser e.g., the contents analyzed at levels (Article, paragraph) or not.
+The Structural Analysis refers to whether the hierarchical structure of a document is considered by the parser e.g., the contents analyzed at structural hierarchical levels (article, paragraph) or not.
 
-#### LAW
+#### Law
 Laws  strictly follow the structure offered by the [National Printing Service](http://www.et.gr). Because of the strict hierarchical structuring of laws, files not conforming to the pdf layout of the National Printing Service are currently not supported.
 
-### PRESIDENTIAL DECREE
-Presidential  Decrees must follow the structure offered by the [National Printing Service](http://www.et.gr). Files not conforming to the pdf layout of the National Printing Service are currently not supported. Additionally supports the existence of Contents in Government Gazette  In this case the introduction of a pdf will lead to the introduction of multiple documents in the system. The system detects appropriate contents of Table of Contents and the structure of the decisions contained eg Presidential Decree or Ministerial Decision
+###  Presidential  Decree
+Presidential  Decrees must follow the structure offered by the [National Printing Service](http://www.et.gr). Files not conforming to the pdf layout of the National Printing Service are currently not supported. Since a Presidential  Decree may actually contain several others, a single pdf will lead to the creation of multiple legal documents. The parser detects from the Table of Contents and both the number and the type, i.e. Presidential Decree or Ministerial Decision, of the decisions contained within. 
 
-Τα Προεδρικά Διατάγματα που εισάγονται στο σύστημα ακολουθούν αυστηρά την δομή/ μορφή Φ.Ε.Κ.  [Εθνικό Τυπογραφείο](http://www.et.gr) υποστηρίζεται επιπρόσθετα η ύπαρξη Πίνακα Περιεχομένων σε Φ.Ε.Κ. Στην περίπτωση αυτή η εισαγωγή ενός pdf θα επιφέρει την εισαγωγή πολλαπλών εγγράφων στο σύστημα. Το σύστημα ανιχνεύει κατάλληλα τα περιεχόμενα του Πίνακα Περιεχομένων καθώς και την δομή των αποφάσεων που περιέχει πχ Προεδρικό Διάταγμα ή Υπουργική Απόφαση. 
+### Regulatory Acts   
+Regulatory Acts may follow:
+ - [National Printing Service](http://www.et.gr) structure, as noted above
+ - General form: In this case due to the lack of proper guidlines, the text is not hierarchically structured, only metadata are identified.
 
-Λόγω της αυστηρής ιεραρχικής δόμησης δεν εισάγονται στο σύστημα αρχεία που δεν είναι σε μορφή Φ.Ε.Κ.
-Μόνη **εξαίρεση** αποτελούν κενά εισερχόμενα έγγραφα (δηλαδή χωρίς περιεχόμενο), όπου το σύστημα παράγει τον σκελετό ενός συντακτικά δομημένου Προεδρικού Διατάγματος και το οποίο στην συνέχεια θα πρέπει να **συμπληρωθεί** από τον χειριστή.
+### Ιnformation circulars - Other Legal Docs
+In this case due to the lack of proper guidlines, the text is not hierarchically structured, only metadata are identified.
 
-### ΑΠΟΦΑΣΗ   
-Οι αποφάσεις μπορεί να ακολουθούν:
+## Categorizer
 
- - Δομή/ μορφή Φ.Ε.Κ.  [Εθνικό Τυπογραφείο](http://www.et.gr), οπότε ισχύουν τα προηγούμενα
- - Δομή γενικού κειμένου: Στην περίπτωση αυτή το κείμενο δεν δομείται ιεραρχικά. Αναγνωριστικό γνώρισμα της απόφασης αποτελεί 
+### Semantic analysis
 
-### Υπόλοιποι Τύποι
-Χαρακτηριστικό γνώρισμα για την ανάλυση/ δόμηση όλων των μη ιεραρχικών τύπων εγγράφων αποτελεί η λεξη "ΘΕΜΑ", μέσω της οποίας γίνεται η ανίχνευση του τίτλου ενός εγγράφου. Με βάση την λέξη θέμα το κείμενο χωρίζεται σε προοίμιο και κυρίως μέρος. Δεν θα πρέπει να είναι η πρώτη σειρά/ λέξη ενός κειμένου.
-Επιπρόσθετα σε περίπτωση ύπαρξης "ΠΙΝΑΚΑ ΔΙΑΝΟΜΗΣ" τα περιεχόμενα αυτού δεν αναλύονται.
+The semantic analysis includes, among others, the detection of: 
 
-##Categorizer
+* Issuing Authority: Specially customized rules expressed as regural expressions that model the hierarchical organization of the issuing agency.
 
-### Σημασιολογική ανάλυση
+* Signer: Supported levels are:
+  1. PRESIDENT OF THE GREEK REPUBLIC
+  2. PRIME MINISTER
+  3. VICE PRESIDENT OF GOVERNMENT
+  4. MEMBERS OF THE CABINET OF MINISTERS
+  5. MINISTERS
+  6. DEPUTY MINISTER
+  7. GENERAL SECRETARY
+  8. SPECIAL SECRETARY
+  9. OTHER
 
-Η σημασιολογική ανάλυση περιλαμβάνει την ανίχνευση 
+* Categorization/ classification :
+Document classification works with customized rules closesly related to the issuing authority.
 
-> Εκδούσα Αρχή : Η ανίχνευση της Εκδούσας Αρχής γίνεται στην προμετωπίδα του κειμένου με ειδικά παραμετροποιημένους κανόνες, οι οποίοι μοντελοποιούν την ιεραρχική οργάνωση του οργανισμού.
+* Keywords:
+The most frequent words, except for stop words.
 
-> Βαθμός Υπογράφοντα : Η ανίχνευση του βαθμού υπογράφοντα γίνεται στο κείμενο "Υπογραφές", με βάση 
-ειδικά παραμετροποιημένους κανόνες. Τα υποστηριζόμενα επίπεδα είναι:
+### Linkage analysis
+In alignment with the EU proposed standard for a European Legislation Identifier (ELI) that provides, among others, a solution to uniquely identify and access national and European legislation online, our approach offers the minimum set of metadata required by the ELI standard and assigns a URI at each different legal block modeled in Akoma Ntoso. For example the '…/ gr/ act/ 2008/ 3643/ main/ art/ 1/' URI identifies article 1 of the main part of the act with no 3643, published in 2008 by the Greek Parliament. In this way the mark-up of each structural unit of the document complies with the ELI standard, as to facilitate the precise linkage of legal citations for each respective structural unit.
 
- 1. ΠΡΟΕΔΡΟΣ ΤΗΣ ΕΛΛΗΝΙΚΗΣ ΔΗΜΟΚΡΑΤΙΑΣ
- 2. ΠΡΩΘΥΠΟΥΡΓΟΣ
- 3. ΑΝΤΙΠΡΟΕΔΡΟΣ ΤΗΣ ΚΥΒΕΡΝΗΣΗΣ
- 4. ΤΑ ΜΕΛΗ ΤΟΥ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ
- 5. ΥΠΟΥΡΓΟΙ
- 6. ΥΦΥΠΟΥΡΓΟΣ
- 7. ΓΕΝΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ
- 8. ΕΙΔΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ
- 9. ΠΡΟΪΣΤΑΜΕΝΟΣ
- 10. ΑΛΛΟΣ
+## DSL Languange for legal documents
 
-> Κατηγοριοποίηση :
-Η κατηγοριοποίηση του εγγράφου γίνεται με ειδικά παραμετροποιημένους κανόνες σε συσχέτιση με την εκδούσα αρχή.
+Domain-specific modeling is a software engineering methodology for designing and developing systems directly from
+the domain-specific models, offering tailor-made solutions to problems in a particular domain. For the identification of the syntax rules, we heavily rely on domain knowledge from the legal experts who provide with feedback on the structural parts and their relationships (nesting, succession, etc) within the legal documents.  
 
-> Λέξεις κλειδιά:
-Οι πιό συχνές λέξεις του κειμένου, με εξαίρεση stop words.
-
-### Ανίχνευση συσχετίσεων 
-
-Η ανίχνευση συσχετίσεων περιλαμβάνει
-> Νόμους 
-> ΠΔ 
-> ΠΟΛ
-
+A visual aid of the context-free grammar (CFG), described in Extended Backus-Naur Form,  is given in the following figure:
+![greek legal documents EBNF](https://raw.githubusercontent.com/mkoniari/LawParser/master/figures/fig2.png "greek legal documents EBNF")
