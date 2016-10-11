@@ -15,7 +15,8 @@ document has the following structure:
 * Text body
 * End part
 
-A visual aid of the aforementioned structure for a law, where we manually annotated structural parts and metadata values.is given in the following figure:
+A visual aid of the aforementioned structure for a law, where we manually annotated structural parts and metadata values is given in the following figure:
+![greek law structure](https://raw.githubusercontent.com/mkoniari/LawParser/master/figures/fig1.png "greek law structure")
 
 Extraction and structuring of pdf files is done in three subsystems:
 * Extractor: Extracting text / images from the pdf.
@@ -77,23 +78,11 @@ Presidential  Decrees must follow the structure offered by the [National Printin
  3. ΑΝΤΙΠΡΟΕΔΡΟΣ ΤΗΣ ΚΥΒΕΡΝΗΣΗΣ
  4. ΤΑ ΜΕΛΗ ΤΟΥ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ
  5. ΥΠΟΥΡΓΟΙ
- 6. ΥΠΟΥΡΓΟΣ
-    1. ΥΠΟΥΡΓΟΣ ΟΙΚΟΝΟΜΙΚΩΝ
-    2. AΝΑΠΛΗΡΩΤΗΣ ΥΠΟΥΡΓΟΣ ΟΙΚΟΝΟΜΙΚΩΝ
- 7. ΥΦΥΠΟΥΡΓΟΣ ΟΙΚΟΝΟΜΙΚΩΝ
- 8. ΓΕΝΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ
-     1. ΓΕΝΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ ΔΗΜΟΣΙΩΝ ΕΣΟΔΩΝ
-     2. ΓΕΝΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ ΠΛΗΡΟΦΟΡΙΑΚΩΝ ΣΥΣΤΗΜΑΤΩΝ &amp; Δ.Υ
-     3. ΓΕΝΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ ΔΗΜΟΣΙΟΝΟΜΙΚΗΣ ΠΟΛΙΤΙΚΗΣ
-     4. ΓΕΝΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ ΟΙΚΟΝΟΜΙΚΗΣ ΠΟΛΙΤΙΚΗΣ
-     5. ΓΕΝΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ ΔΗΜΟΣΙΑΣ ΠΕΡΙΟΥΣΙΑΣ
- 9. ΕΙΔΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ ΣΔΟΕ
- 10. ΠΡΟΪΣΤΑΜΕΝΟΣ
-     1.ΠΡΟΪΣΤΑΜΕΝΟΣ ΓΕΝΙΚΗΣ ΔΙΕΥΘΥΝΣΗΣ
-     2. ΠΡΟΪΣΤΑΜΕΝΟΣ ΔΙΕΥΘΥΝΣΗΣ
-     3. ΠΡΟΪΣΤΑΜΕΝΟΣ ΤΜΗΜΑΤΟΣ
-     4. ΠΡΟΪΣΤΑΜΕΝΟΣ ΑΥΤΟΤΕΛΟΥΣ ΓΡΑΦΕΙΟΥ     
- 11. ΑΛΛΟΣ
+ 6. ΥΦΥΠΟΥΡΓΟΣ
+ 7. ΓΕΝΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ
+ 8. ΕΙΔΙΚΟΣ ΓΡΑΜΜΑΤΕΑΣ
+ 9. ΠΡΟΪΣΤΑΜΕΝΟΣ
+ 10. ΑΛΛΟΣ
 
 > Κατηγοριοποίηση :
 Η κατηγοριοποίηση του εγγράφου γίνεται με ειδικά παραμετροποιημένους κανόνες σε συσχέτιση με την εκδούσα αρχή.
