@@ -114,3 +114,16 @@ We follow a pipeline strategy, utilizing a top-down approach, that can be summar
 3. Legal Blocks Isolation
 4. Legal Modeling
 5. Semantic check and validation
+
+## Samples
+File [greek law 4330](https://github.com/mkoniari/LawParser/blob/master/samples/law_4330_2015.pdf) contains greek law 4330 as published in the official goverment gazette (volume 59 / year 2015). The resuling  Akoma Ntoso file is [xml greek law 4330](https://github.com/mkoniari/LawParser/blob/master/samples/law_4330_2015.xml)
+
+## Acknowledgements
+Within this work we utilize 
+* [Akoma Ntoso](http://www.akomantoso.org/) a popular XML schemas for representig legal documents
+* [akomantoso-lib](http://kohsah.github.io/akomantoso-lib/) a Java API for creating and editing Akoma Ntoso XML documents
+* [ANTLR](http://www.antlr.org/) ANother Tool for Language Recognition is a powerful parser generator widely used to build languages, tools, and frameworks. From a grammar, ANTLR generates a parser that can build and walk parse trees.
+
+We wish to thank the [General Secretariat of Public Revenue](www.publicrevenue.gr) for providing  a corpus of more than 600 legal documents, such as laws, presidential decrees and regulatory acts, in pdf format, on which iterative tests have been carried out, aiming at modeling and refining our method.
+
+Finally our parsing mechanism has been deployed in a real-world web platform [e-Lib](http://www.publicrevenue.gr/elib/), aiming to provide semantic access to Greek tax legislation, under the supervision of the[General Secretariat of Public Revenue](www.publicrevenue.gr). 
