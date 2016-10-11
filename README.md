@@ -1,6 +1,6 @@
 # Towards Automatic Structuring and Semantic Indexing of Legal Documents
 
-This page is a companion for the PCI 2016 paper on [Towards Automatic Structuring and Semantic Indexing of Legal  Documents](http://dx.doi.org/10.1145/3003733.3003801), written by Koniaris Marios (me), George Papastefanatos and Yannis Vassiliou. This page hosts additional info, as to encourage progress on the Automatic Structuring and Semantic Indexing of Legal Documents.
+This page is a companion for the [PCI 2016](http://pci2016.teiwest.gr/) paper on [Towards Automatic Structuring and Semantic Indexing of Legal  Documents](http://dx.doi.org/10.1145/3003733.3003801), written by Koniaris Marios (me), George Papastefanatos and Yannis Vassiliou. This page hosts additional info, as to encourage progress on the Automatic Structuring and Semantic Indexing of Legal Documents.
 
 ## Intro
 Legal documents are usally stored and offered to the end user in presentation oriented manifestation, making impossible for the end users to inquiry  semantics about the documents, such as date of enactment, date of repeal, jurisdiction, etc. or to reuse information and establish an interconnection with similar repositories. We present an approach for extracting a machine readable semantic representation of legislation, from unstructured document formats. Our method exploits common formats of legal documents to identify blocks of structural and semantic information and models them according
@@ -37,7 +37,7 @@ Our parser imlementation can handle the following types of documents
 | Law| act | YES |
 | Presidential  Decree| pd |YES |
 | Regulatory Act  |ap | YES/NO |
-| Ιnformation circulars| egk| NO |
+| Information circulars| egk| NO |
 | Other Legal Docs| other | NO |
 
 
@@ -55,7 +55,7 @@ Regulatory Acts may follow:
  - [National Printing Service](http://www.et.gr) structure, as noted above
  - General form: In this case due to the lack of proper guidlines, the text is not hierarchically structured, only metadata are identified.
 
-### Ιnformation circulars - Other Legal Docs
+### Information circulars - Other Legal Docs
 In this case due to the lack of proper guidlines, the text is not hierarchically structured, only metadata are identified.
 
 ## Categorizer
@@ -84,7 +84,7 @@ Document classification works with customized rules closesly related to the issu
 The most frequent words, except for stop words.
 
 ### Linkage analysis
-In alignment with the EU proposed standard for a European Legislation Identifier (ELI) that provides, among others, a solution to uniquely identify and access national and European legislation online, our approach offers the minimum set of metadata required by the ELI standard and assigns a URI at each different legal block modeled in Akoma Ntoso. For example the '…/ gr/ act/ 2008/ 3643/ main/ art/ 1/' URI identifies article 1 of the main part of the act with no 3643, published in 2008 by the Greek Parliament. In this way the mark-up of each structural unit of the document complies with the ELI standard, as to facilitate the precise linkage of legal citations for each respective structural unit.
+In alignment with the EU proposed standard for a European Legislation Identifier (ELI) that provides, among others, a solution to uniquely identify and access national and European legislation online, our approach offers the minimum set of metadata required by the ELI standard and assigns a URI at each different legal block modeled in Akoma Ntoso. For example the '.../gr/act/2008/3643/main/art/1/...' URI identifies article 1 of the main part of the act with no 3643, published in 2008 by the Greek Parliament. In this way the mark-up of each structural unit of the document complies with the ELI standard, as to facilitate the precise linkage of legal citations for each respective structural unit.
 
 ## DSL Languange for legal documents
 
@@ -126,4 +126,4 @@ Within this work we utilize
 
 We wish to thank the [General Secretariat of Public Revenue](www.publicrevenue.gr) for providing  a corpus of more than 600 legal documents, such as laws, presidential decrees and regulatory acts, in pdf format, on which iterative tests have been carried out, aiming at modeling and refining our method.
 
-Finally our parsing mechanism has been deployed in a real-world web platform [e-Lib](http://www.publicrevenue.gr/elib/), aiming to provide semantic access to Greek tax legislation, under the supervision of the[General Secretariat of Public Revenue](www.publicrevenue.gr). 
+Finally our parsing mechanism has been deployed in a real-world web platform [e-Lib](http://www.publicrevenue.gr/elib/), aiming to provide semantic access to Greek tax legislation, under the supervision of the [General Secretariat of Public Revenue](www.publicrevenue.gr). 
