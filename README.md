@@ -1,6 +1,6 @@
 # Towards Automatic Structuring and Semantic Indexing of Legal Documents
 
-This page is a companion for the PCI 2016 paper on [Towards Automatic Structuring and Semantic Indexing of Legal  Documents](http://dx.doi.org/10.1145/3003733.3003801), written by Koniaris Marios (me), George Papastefanatos and Yannis Vassiliou. This page hosts the complete dataset, ground-truth data, queries and relevance assessments we utilize in the article. Our goal is to encourage progress on the Automatic Structuring and Semantic Indexing of Legal Documents.
+This page is a companion for the PCI 2016 paper on [Towards Automatic Structuring and Semantic Indexing of Legal  Documents](http://dx.doi.org/10.1145/3003733.3003801), written by Koniaris Marios (me), George Papastefanatos and Yannis Vassiliou. This page hosts additional info, as to encourage progress on the Automatic Structuring and Semantic Indexing of Legal Documents.
 
 ## Intro
 Legal documents are usally stored and offered to the end user in presentation oriented manifestation, making impossible for the end users to inquiry  semantics about the documents, such as date of enactment, date of repeal, jurisdiction, etc. or to reuse information and establish an interconnection with similar repositories. We present an approach for extracting a machine readable semantic representation of legislation, from unstructured document formats. Our method exploits common formats of legal documents to identify blocks of structural and semantic information and models them according
@@ -9,7 +9,7 @@ to a popular legal meta-schema, [Akoma Ntoso](http://www.akomantoso.org/)
 ## Approach Overview
 
 Several guidelines/ principles of good legislative drafting, both at 
-National and E.U. level (e.g., Joint Practical Guide for persons involved in the drafting of European Union legislation6) have established common formats, which most legal documents abide by. In a simplified view, a legislative legal
+National and E.U. level (e.g., [Joint Practical Guide for persons involved in the drafting of European Union legislation](https://www.google.gr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwju8M2P_NLPAhWGOxoKHT0DDC4QFgghMAA&url=http%3A%2F%2Feur-lex.europa.eu%2Fcontent%2Ftechleg%2FKB0213228ENN.pdf&usg=AFQjCNE5WLDhUqe7vv9A_DOSepx60yloZw)) have established common formats, which most legal documents abide by. In a simplified view, a legislative legal
 document has the following structure:
 * Introductory part
 * Text body
