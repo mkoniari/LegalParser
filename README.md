@@ -108,6 +108,7 @@ The main steps of our approach are:
 * validate produced files against the selected schema
 
 We follow a pipeline strategy, utilizing a top-down approach, that can be summarized into the following 5 steps:
+
 1. Document Type Identification. 
 2. Structural Analysis. 
 3. Legal Blocks Isolation
