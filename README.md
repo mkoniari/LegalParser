@@ -91,5 +91,25 @@ In alignment with the EU proposed standard for a European Legislation Identifier
 Domain-specific modeling is a software engineering methodology for designing and developing systems directly from
 the domain-specific models, offering tailor-made solutions to problems in a particular domain. For the identification of the syntax rules, we heavily rely on domain knowledge from the legal experts who provide with feedback on the structural parts and their relationships (nesting, succession, etc) within the legal documents.  
 
-A visual aid of the context-free grammar (CFG), described in Extended Backus-Naur Form,  is given in the following figure:
+A visual aid of the context-free grammar (CFG), described in Extended Backus-Naur Form,  is given in the following figure, where nonterminals such as body and conclusions are defined separately:
 ![greek legal documents EBNF](https://raw.githubusercontent.com/mkoniari/LawParser/master/figures/fig2.png "greek legal documents EBNF")
+
+## Parsing Process
+
+### Document Structure Parser
+Based on the defined GFG and the set of syntax rules defined, we employ [ANTLR](http://www.antlr.org/) parser generator as to implement the lexer, parser, and tree walker. 
+An  overview of the Document Structure Parser,  is given in the following figure:
+![Overview of Document Structure Parser](https://raw.githubusercontent.com/mkoniari/LawParser/master/figures/fig3.png "Overview of Document Structure Parser")
+
+### Parsing Strategy
+The main steps of our approach are:
+* identify the structure of the legal documents
+* identify legal documents metadata
+* validate produced files against the selected schema
+
+We follow a pipeline strategy, utilizing a top-down approach, that can be summarized into the following 5 steps:
+1. Document Type Identification. 
+2. Structural Analysis. 
+3. Legal Blocks Isolation
+4. Legal Modeling
+5. Semantic check and validation
