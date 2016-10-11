@@ -31,13 +31,16 @@ We obtain images directly from the pdf.
 
 ### Parser
 Our parser imlementation can handle the following types of documents
-TYPE    |  URI | STRUCTURAL ANALYSIS
--------- | --- | -----------
-LAW| act | YES
-PRESIDENTIAL DECREE| pd |YES
-regulatory act   |ap | YES/NO
-ΕΓΚΥΚΛΙΟΣ| egk| NO
-OTHER LEGAL DOCS| other | NO
+
+| TYPE  | URI | STRUCTURAL ANALYSIS|
+| ------------- | ------------- |
+| LAW| act | YES |
+| PRESIDENTIAL DECREE| pd |YES |
+| regulatory act   |ap | YES/NO |
+| ΕΓΚΥΚΛΙΟΣ| egk| NO |
+| OTHER LEGAL DOCS| other | NO |
+
+
 
 The Structural Analysis refers to whether the hierarchical structure of a document is considered by the parser e.g., the contents analyzed at levels (Article, paragraph) or not.
 
