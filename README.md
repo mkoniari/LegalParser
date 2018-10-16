@@ -124,6 +124,6 @@ Within this work we utilize
 * [akomantoso-lib](http://kohsah.github.io/akomantoso-lib/) a Java API for creating and editing Akoma Ntoso XML documents
 * [ANTLR](http://www.antlr.org/) ANother Tool for Language Recognition is a powerful parser generator widely used to build languages, tools, and frameworks. From a grammar, ANTLR generates a parser that can build and walk parse trees.
 
-We wish to thank the [General Secretariat of Public Revenue](www.publicrevenue.gr) for providing  a corpus of more than 600 legal documents, such as laws, presidential decrees and regulatory acts, in pdf format, on which iterative tests have been carried out, aiming at modeling and refining our method.
+We wish to thank the [General Secretariat of Public Revenue](http://www.publicrevenue.gr) for providing  a corpus of more than 600 legal documents, such as laws, presidential decrees and regulatory acts, in pdf format, on which iterative tests have been carried out, aiming at modeling and refining our method.
 
-Finally our parsing mechanism has been deployed in a real-world web platform [e-Lib](http://www.publicrevenue.gr/elib/), aiming to provide semantic access to Greek tax legislation, under the supervision of the [General Secretariat of Public Revenue](www.publicrevenue.gr).
+Finally our parsing mechanism has been deployed in a real-world web platform [e-Lib](http://www.publicrevenue.gr/elib/), aiming to provide semantic access to Greek tax legislation, under the supervision of the [General Secretariat of Public Revenue](http://www.publicrevenue.gr).
