@@ -9,7 +9,7 @@ to a popular legal meta-schema, [Akoma Ntoso](http://www.akomantoso.org/)
 ## Approach Overview
 
 Several guidelines/ principles of good legislative drafting, both at 
-National and E.U. level (e.g., [Joint Practical Guide for persons involved in the drafting of European Union legislation](https://www.google.gr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwju8M2P_NLPAhWGOxoKHT0DDC4QFgghMAA&url=http%3A%2F%2Feur-lex.europa.eu%2Fcontent%2Ftechleg%2FKB0213228ENN.pdf&usg=AFQjCNE5WLDhUqe7vv9A_DOSepx60yloZw)) have established common formats, which most legal documents abide by. In a simplified view, a legislative legal
+National and E.U. level (e.g., [Joint Practical Guide for persons involved in the drafting of European Union legislation](https://eur-lex.europa.eu/content/techleg/KB0213228ENN.pdf)) have established common formats, which most legal documents abide by. In a simplified view, a legislative legal
 document has the following structure:
 * Introductory part
 * Text body
