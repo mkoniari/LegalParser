@@ -121,7 +121,7 @@ File [Greek law 4330](https://github.com/mkoniari/LawParser/blob/master/samples/
 ## Acknowledgements
 Within this work we utilize 
 * [Akoma Ntoso](http://www.akomantoso.org/) a popular XML schemas for representing legal documents
-* [akomantoso-lib](http://kohsah.github.io/akomantoso-lib/) a Java API for creating and editing Akoma Ntoso XML documents
+* [akomantoso-lib](https://bungenix.github.io/akomantoso-lib/) a Java API for creating and editing Akoma Ntoso XML documents
 * [ANTLR](http://www.antlr.org/) ANother Tool for Language Recognition is a powerful parser generator widely used to build languages, tools, and frameworks. From a grammar, ANTLR generates a parser that can build and walk parse trees.
 
 We wish to thank the [General Secretariat of Public Revenue](http://www.publicrevenue.gr) for providing  a corpus of more than 600 legal documents, such as laws, presidential decrees and regulatory acts, in pdf format, on which iterative tests have been carried out, aiming at modeling and refining our method.
